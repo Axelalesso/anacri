@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* SECCIÓN */
+.trabajos {
+  padding: 80px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.trabajos h2 {
+    font-family: 'Poppins', sans-serif; 
+  font-size: 2.5rem;
+}
+
+.subtitulo {
+  color: #777;
+  font-family: 'Poppins', sans-serif; 
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* CONTENIDO */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/* IMAGEN */
+.lightbox-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ANIMACIÓN */
+.fade {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* BOTONES */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.prev {
+  left: -60px;
+}
+
+.next {
+  right: -60px;
+}
+
+/* CERRAR */
+.cerrar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* CONTADOR */
+.contador {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* --- AJUSTES PARA CELULARES --- */
+@media (max-width: 768px) {
+  /* Hacemos que la imagen no ocupe todo el ancho para dejar espacio a los botones si es necesario, 
+     o ponemos los botones sobre la imagen */
+  .lightbox-content {
+    max-width: 100%;
+    width: 95%;
+  }
+
+  /* Movemos los botones ADENTRO de la pantalla */
+  .prev {
+    left: 10px; /* Ya no es -60px */
+  }
+
+  .next {
+    right: 10px; /* Ya no es -60px */
+  }
+
+  .prev, .next {
+    background: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para que se vean sobre la foto */
+    font-size: 30px;
+    padding: 15px; /* Más área de contacto para el dedo */
+    z-index: 1001;
+  }
+
+  .cerrar {
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 12px;
+    border-radius: 50%;
+  }
+
+  /* Ocultamos el contador si molesta o lo bajamos más */
+  .contador {
+    bottom: -40px;
+  }
+}

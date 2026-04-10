@@ -1,0 +1,188 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
+/* EFECTO LATIDO (PRO) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background: #B88E00;
+    margin: 40px auto;
+}
+
+
+.caja-nosotros{
+  background-color: #2A3561;
+  border-radius: 20px;
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  margin: 30px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: fit-content; /* Se ajusta al texto */
+}
+
+.caja-nosotros:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-extendido{
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  margin-bottom: 7px;
+}
+
+
+.sobre-nosotros {
+  margin-top: 30px;
+  padding: 20px 20px;
+  background: white;
+}
+
+.contenedor-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.texto-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.texto-nosotros h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.texto-nosotros p {
+  margin-bottom: 15px;
+  color: #555;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.imagen-nosotros {
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagen-nosotros img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+.boton-nosotros{
+  font-family: 'Poppins', sans-serif; 
+  margin-top: 10px;
+  background-color: #2A3561;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* TÍTULO (cajita naranja) */
+  .caja-nosotros {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 20px auto;
+  }
+
+  /* SECCIÓN GENERAL */
+  .sobre-nosotros {
+    padding: 20px 15px;
+  }
+
+  /* GRID → 1 COLUMNA */
+  .contenedor-nosotros {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* TEXTO */
+  .texto-nosotros h2 {
+    font-size: 24px;
+  }
+
+  .texto-nosotros p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* IMAGEN */
+  .imagen-nosotros img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* LOGO */
+  .logo-nosotros {
+    width: 40px;
+    margin: 20px auto 5px;
+  }
+}

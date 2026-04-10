@@ -1,0 +1,115 @@
+/* --- ESTILOS BASE (ESCRITORIO - PC) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #1a1a1a; /* Fondo Negro como el formulario */
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.nav-logo .logo-img {
+  height: 60px;
+  filter: brightness(1.1); /* Por si el logo es muy oscuro */
+}
+
+/* Links en Blanco para PC */
+.nav-items {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #ffffff; /* Texto Blanco */
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  font-family: 'Poppins', sans-serif; /* Usamos la fuente importada */
+}
+
+.nav-items a:hover {
+  color: #cccccc; /* Gris claro al pasar el mouse */
+}
+
+/* Iconos redes sociales en Blanco para PC */
+.nav-social {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Hamburguesa (oculta en PC, color blanco para cuando aparezca) */
+.menu-hamburguesa {
+  display: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Esto asegura que el contenedor móvil esté oculto por defecto en PC */
+.nav-social-mobile {
+  display: none;
+}
+
+/* --- RESPONSIVE (CELULAR) --- */
+@media (max-width: 768px) {
+  .menu-hamburguesa {
+    display: block; /* Aparece en celu */
+  }
+
+  .nav-social {
+    display: none; /* Oculta iconos sueltos */
+  }
+
+  .nav-items {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    background-color: #1a1a1a; /* Menú móvil también negro */
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: 0.4s ease-in-out;
+    box-shadow: -10px 0 20px rgba(0,0,0,0.5);
+  }
+
+  .nav-items.open {
+    right: 0; /* Desliza el menú */
+  }
+
+  .nav-items a {
+    font-size: 1.3rem; /* Más grande para el dedo */
+  }
+
+  /* Redes sociales dentro del menú móvil */
+  .nav-social-mobile {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+  
+  .nav-social-mobile a {
+    color: #ffffff;
+  }
+}
