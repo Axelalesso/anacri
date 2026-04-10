@@ -1,4 +1,4 @@
-import "./Servicios.css";
+import "./servicios.css";
 import { FaBuilding, FaTools, FaHome, FaCity, FaDraftingCompass, FaLayerGroup } from "react-icons/fa";
 
 const servicios = [
