@@ -37,7 +37,7 @@ const servicios = [
 export default function Servicios() {
   return (
     <section className="servicios">
-      <h2>Nuestros Servicios</h2>
+      <h2 id="servicios" >Nuestros Servicios</h2>
       <div className="servicios-grid">
         {servicios.map((servicio, index) => (
           <div className="card" key={index}>

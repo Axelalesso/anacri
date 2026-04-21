@@ -97,18 +97,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-items: flex-start; /* 👈 clave */
 }
 
 
 .texto-nosotros h2 {
   font-size: 30px;
   margin-bottom: 20px;
+text-align: center;
 }
 
 .texto-nosotros p {
   margin-bottom: 15px;
   color: #555;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
+  text-align: justify; /* 👈 lo que quiere tu cliente */ 
 }
 
 .imagen-nosotros {

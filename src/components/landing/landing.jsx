@@ -29,7 +29,7 @@ export default function Landing() {
   <div className="contenedor-nosotros">
     <div className="texto-nosotros">
       <div>
-        <h2 className="caja-nosotros">Nosotros</h2>
+        <h2 className="caja-nosotros" id="nosostros">Nosotros</h2>
       </div>
       <p className="nosotros-text" >
           Somos una empresa constructora que en 2027 cumplirá 40 años de historia. 

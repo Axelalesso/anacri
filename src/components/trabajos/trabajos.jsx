@@ -77,7 +77,7 @@ const Trabajos = () => {
 
   return (
     <section className="trabajos">
-      <h2>Trabajos Realizados</h2>
+      <h2 id="trabajos" >Trabajos Realizados</h2>
       <p className="subtitulo">Proyectos reales de nuestros clientes</p>
 
       <div className="grid">

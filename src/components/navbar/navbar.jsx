@@ -29,9 +29,9 @@ export default function Navbar() {
       {/* ITEMS DE NAVEGACIÓN */}
       <div className={`nav-items ${isOpen ? "open" : ""}`}>
         <Link to="/" onClick={closeMenu}>Inicio</Link>
-        <Link to="/" onClick={closeMenu}>Servicios</Link>
-        <Link to="/" onClick={closeMenu}>Trabajos</Link>
-        <Link to="/" onClick={closeMenu}>Nosotros</Link>
+        <Link to="/#servicios" onClick={closeMenu}>Servicios</Link>
+        <Link to="/#trabajos" onClick={closeMenu}>Trabajos</Link>
+        <Link to="/#nosotros" onClick={closeMenu}>Nosotros</Link>
         <Link to="/contacto" onClick={closeMenu}>Contacto</Link>
         
         {/* Redes sociales dentro del menú (solo se ven en el celu) */}
